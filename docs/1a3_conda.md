@@ -68,5 +68,4 @@ In order to use the conda environments, you need to run the following command:
 ```bash
 conda init bash
 ```
-
-![alt text](conda-init.png)
+![config]({{"/assets/images/onda-init.png" | relative_url }})
