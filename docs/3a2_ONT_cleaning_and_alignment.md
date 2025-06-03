@@ -4,7 +4,7 @@ title: Lesson 2 - Oxford Nanopore Technologies alignment
 nav_order: 2
 parent: 3. Tutorial
 description: A comprehensive guide to understanding epigenetics.
-published: true
+published: false
 ---
 Final version
 {: .label .label-green }
@@ -38,7 +38,7 @@ Connect to the server and set the working directory
 conda activate epigenomics
 
 # Set the working directory
-cd /data2/student_space/st24_16_folder/epigenomics/
+cd epigenomics/
 
 # Create the required directories 
 mkdir -p ont/sequences ont/reference

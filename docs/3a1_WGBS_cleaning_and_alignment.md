@@ -4,6 +4,7 @@ title: Lesson 1 - WGBS raw data cleaning and alignment
 nav_order: 1
 parent: 3. Tutorial
 description: A comprehensive guide to understanding epigenetics.
+published: false
 ---
 <!--
 You can select the color-scheme for the tutorial: <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
@@ -95,9 +96,6 @@ fastqc --help
 ### Set the working directory
 {: .no_toc }
 ```bash
-# move to the working directory
-cd /data2/student_space/st24_16_folder
-
 # create the folder structure
 mkdir -p epigenomics/wgbs/sequences
 
@@ -108,7 +106,7 @@ cd epigenomics/wgbs
 ### Copy the raw data from the folder to our working directory
 {: .no_toc }
 ```bash
-cp /data2/biotecnologie_molecolari_magris/epigenomics/wgbs/sequences/rkatsiteli.leaves.R*.fastq.gz sequences/
+cp /course/tadb/epigenomics/wgbs/sequences/rkatsiteli.leaves.R*.fastq.gz sequences/
 ```
 <!--
 cd /projects/novabreed/share/gmagris/collaboration/lezioni/2024/EEA/wgbs/teaching_dataset
@@ -279,7 +277,7 @@ We need to create the index files required by Bismark. The reference that we wil
 mkdir -p reference 
 
 # copy the fasta file to the reference directory
-cp /data2/biotecnologie_molecolari_magris/epigenomics/wgbs/reference/vitis_vinifera.fasta reference/
+cp /course/tadb//epigenomics/wgbs/reference/vitis_vinifera.fasta reference/
 ```
 
 ### Create the indexes required by Bismark (only once)
@@ -588,7 +586,7 @@ bismark_methylation_extractor \
 --bedGraph \
 --CX_context \
 --cytosine_report \
---genome_folder /data2/student_space/st24_16_folder/epigenomics/wgbs/reference/ \
+--genome_folder ~/epigenomics/wgbs/reference/ \
 alignments/rkatsiteli.leaves_pe.deduplicated.bam
 ```
 
@@ -775,7 +773,7 @@ We can use the chloroplast genome (or lambda genome) in order to evaluate the pe
 mkdir -p chloroplast
 
 # we need to copy the fasta file 
-cp /data2/biotecnologie_molecolari_magris/epigenomics/wgbs/chloroplast/chloroplast.fasta chloroplast/
+cp /course/tadb//epigenomics/wgbs/chloroplast/chloroplast.fasta chloroplast/
 
 # we can now index the fasta file
 bismark_genome_preparation \
